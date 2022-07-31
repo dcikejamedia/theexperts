@@ -4,82 +4,83 @@ namespace App\Http\Controllers;
 
 use App\Models\Organization;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class OrganizationController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function index()
+    public function index(): JsonResponse
     {
-        //
+        return $this->success();
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function create()
+    public function create(): JsonResponse
     {
-        //
+        return $this->success();
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return JsonResponse
      */
-    public function store(Request $request)
+    public function store(Request $request): JsonResponse
     {
-        //
+        return $this->success();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Organization  $organization
-     * @return \Illuminate\Http\Response
+     * @param Organization $organization
+     * @return JsonResponse
      */
-    public function show(Organization $organization)
+    public function show(Organization $organization): JsonResponse
     {
-        //
+        return $this->success();
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Organization  $organization
-     * @return \Illuminate\Http\Response
+     * @param Organization $organization
+     * @return JsonResponse
      */
-    public function edit(Organization $organization)
+    public function edit(Organization $organization): JsonResponse
     {
-        //
+        return $this->success();
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Organization  $organization
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Organization $organization
+     * @return JsonResponse
      */
-    public function update(Request $request, Organization $organization)
+    public function update(Request $request, Organization $organization): JsonResponse
     {
-        //
+        return $this->success();
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Organization  $organization
-     * @return \Illuminate\Http\Response
+     * @param Organization $organization
+     * @return JsonResponse
      */
-    public function destroy(Organization $organization)
+    public function destroy(Organization $organization): JsonResponse
     {
-        //
+        return $this->success();
     }
 }
