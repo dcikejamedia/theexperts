@@ -1,0 +1,69 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: TheExperts API Documentation
+  termsOfService: https://theexperts.com/terms/
+  contact:
+    email: contact@theexperts.com
+    url: http://example.com/contact
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  x-logo:
+    url: https://redocly.github.io/openapi-template/logo.png
+  description: >
+    # Introduction
+
+
+    This API definition is intended to be a good starting point to describe this
+    application
+
+
+
+    # OpenAPI Specification
+
+
+    The goal of The OpenAPI Specification is to define a standard,
+
+    language-agnostic interface to REST APIs which
+
+
+    allows both humans and computers to discover and understand the capabilities
+
+    of the service without access to source
+
+
+    code, documentation, or through network traffic inspection. When properly
+
+    defined via OpenAPI, a consumer can
+
+
+    understand and interact with the remote service with a minimal amount of
+
+    implementation logic. Similar to what
+
+
+    interfaces have done for lower-level programming, OpenAPI removes the
+
+    guesswork in calling the service.
+tags:
+  - name: Routes
+    description: Display all fully CRUDed routes in  at a glance
+servers:
+  - url: http://localhost:9999/api/v1
+  - url: https://theexperts.com/api/v1
+paths:
+  /api/routes:
+    get:
+      tags:
+        - Routes
+      summary: Retrieve All Routes
+      description: |
+        Returns all routes on the application
+      operationId: RouteGet
+      responses:
+        '200':
+          description: Ok
+        '404':
+          description: Resource Not Found
+components: {}

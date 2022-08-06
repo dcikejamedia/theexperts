@@ -1,0 +1,39 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: TheExperts API Documentation
+  termsOfService: 'https://theexperts.com/terms/'
+  contact:
+    email: contact@theexperts.com
+    url: 'http://example.com/contact'
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  x-logo:
+    url: 'https://redocly.github.io/openapi-template/logo.png'
+  description:
+    $ref: ./info.md
+tags:
+  - name: Routes
+    description: Display all fully CRUDed routes in  at a glance
+servers:
+  - url: 'http://localhost:9999/api/v1'
+    description: Localhost
+  - url: 'https://dev.theexperts.com/api/v1'
+    description: Dev Server
+  - url: 'https://theexperts.com/api/v1'
+    description: Production Server
+paths:
+  /api/routes:
+    get:
+      tags:
+        - Routes
+      summary: Retrieve All Routes
+      description: |
+        Returns all routes on the application
+      operationId: RouteGet
+      responses:
+        '200':
+          description: Ok
+        '404':
+          description: Resource Not Found
